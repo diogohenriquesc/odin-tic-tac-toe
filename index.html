@@ -6,17 +6,39 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Flamenco:wght@400&family=Space+Grotesk&display=swap"
+    rel="stylesheet">
+  <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="./css/style.css">
   <script defer src="./js/script.js"></script>
   <title>Tic Tac Toe</title>
 </head>
 <body>
   <main>
+    <section class="header" data-selected="0">
+      <div class="header__info">
+        <div class="player__info" data-player="0">
+          <input type="text" class="player__info-name" value="Player One" title="Change name" required autocomplete="off">
+          <p class="player__info-score">0</p>
+        </div>
+        <div class="player__info" data-player="1">
+          <input type="text" class="player__info-name" value="Player Two" title="Change name" required autocomplete="off">
+          <p class="player__info-score">0</p>
+        </div>
+      </div>
+
+      <div class="header__message">
+        <p></p>
+        <div class="header__control">
+          <button class="setting__btn btn-replay" title="Play again">
+            <img src="./images/replay.svg" alt="">
+          </button>
+        </div>
+      </div>
+
+      
+    </section>
+
     <section class="gameboard">
       <button class="gameboard__cell" data-number="0"></button>
       <button class="gameboard__cell" data-number="1"></button>
@@ -27,10 +49,6 @@
       <button class="gameboard__cell" data-number="6"></button>
       <button class="gameboard__cell" data-number="7"></button>
       <button class="gameboard__cell" data-number="8"></button>
-    </section>
-
-    <section class="message">
-      <p></p>
     </section>
   </main>
 </body>
